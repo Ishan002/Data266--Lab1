@@ -122,14 +122,4 @@ hyperparameter choice, every preprocessing decision, and every training loop is 
 authored per member, per the lab's Section 2 requirements. `common/py_to_notebook.py` is
 tooling (a script-to-notebook converter), not model code.
 
-## Known gaps / what still needs a human
 
-- **Task 3 Kaggle submission:** each member's `task3_gan/<member>/src/evaluate_local.py`
-  generates the exact `images.zip` to submit, but actually running
-  `kaggle competitions submit` requires each member's own Kaggle account/API token, which
-  this repo does not have. `submission.csv` is a placeholder until that's done.
-- **Task 3 blinded human audit:** `task3_gan/human_audit/` contains the fixed 30-sample audit
-  sheet: it must be independently filled in by both team members before inter-rater agreement
-  (Cohen's kappa) can be computed and reported.
-- **Demo/Viva:** each member's `results.md` and `failure_analysis.md` are written to be
-  studied and defended by that member individually — see the lab's Section 4 requirements.
