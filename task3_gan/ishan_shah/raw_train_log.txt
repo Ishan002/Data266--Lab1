@@ -1,0 +1,5 @@
+epoch   1/40 | loss_G 5.1742 | loss_D 0.3341 | cycle 0.3238 | identity 0.3075 | grad_norm_G 29.838
+epoch   2/40 | loss_G 4.3213 | loss_D 0.2327 | cycle 0.2700 | identity 0.2484 | grad_norm_G 27.326
+epoch   3/40 | loss_G 4.1702 | loss_D 0.2092 | cycle 0.2564 | identity 0.2362 | grad_norm_G 26.126
+epoch   4/40 | loss_G 4.0563 | loss_D 0.2035 | cycle 0.2499 | identity 0.2257 | grad_norm_G 27.224
+epoch   5/40 | loss_G 4.1243 | loss_D 0.1910 | cycle 0.2530 | identity 0.2294 | grad_norm_G 27.343

@@ -1,0 +1,162 @@
+[
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9988928437232971,
+    "text_snippet": "I love Paris, but don't love the Vegas version of the hotel.  Sure it has the Eiffel Tower, the Montgolfier Balloon, and the Arc de Triomphe.  Sure it has one of my favorite restaurants, Mon Ami Gabi, and a terrific buffet.  Sure, if your room faces the Blvd then you have a great view of the Bellagi",
+    "proposed_fix": "Add explicit negation-scope features so phrases like 'not as good as' don't get read as purely positive by keyword co-occurrence."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9988619089126587,
+    "text_snippet": "It brings me no great pleasure to be the first bad review of this place. The thought of a David arising to take on the Goliath corporation has me rooting for this place.\\n\\nNow open for less than a week. I wanted someone to write a glowing review of this place which makes me want to give them anothe",
+    "proposed_fix": "Add explicit negation-scope features so phrases like 'not as good as' don't get read as purely positive by keyword co-occurrence."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9983388185501099,
+    "text_snippet": "We went here based on all the positive reviews. I should have lowered my expectations. We ordered chips & guac and several 99 cent tacos (fish, beef & chicken). The tacos had a hard shell which I actually like and were topped with a TON of shredded lettuce and shredded cheddar cheese. I mistakenly t",
+    "proposed_fix": "Add explicit negation-scope features so phrases like 'not as good as' don't get read as purely positive by keyword co-occurrence."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9974741339683533,
+    "text_snippet": "Not at all impressed! The place is a maze - a condensed outdoor mall with lots of cheap stores.  The best stores are Target and Kohls which says a lot.  Desert Ridge seems to be for teenagers or young moms.\\n\\nDifficult to find your way around the narrow streets - no large directional signage with s",
+    "proposed_fix": "Add explicit negation-scope features so phrases like 'not as good as' don't get read as purely positive by keyword co-occurrence."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9970911741256714,
+    "text_snippet": "The Westin is a good option if you want to get away from the mega hotels and ringing casinos on the strip. The hotel is about a quarter mile from the strip, so if you have the itch to be in the middle of the Vegas action then it's a short walk away. The other benefit of staying at this location is t",
+    "proposed_fix": "Add explicit negation-scope features so phrases like 'not as good as' don't get read as purely positive by keyword co-occurrence."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0006812334177084267,
+    "text_snippet": "Rooms are less than $50 a night...what did you expect??\\nOk so it's not the nicest place to stay on the strip, but the rooms are so ridiculously cheap. Plus it's Vegas, how much time are you going to spend in your room anyways??\\nMy girlfriend and I stayed there during the week and paid next to noth",
+    "proposed_fix": "GRU's single final hidden state can forget early-review sentiment on long inputs -- try mean-pooling over all GRU timesteps instead of only the last one."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0015943956095725298,
+    "text_snippet": "I had to organize our company convention,  I picked this show because I thought it would be fun. I had a private show, if you have 70 people or more you can have a private show. I was nervous because I wasn't sure if this would be a bad show. I'm glad I picked this show. I recommend if you have a co",
+    "proposed_fix": "GRU's single final hidden state can forget early-review sentiment on long inputs -- try mean-pooling over all GRU timesteps instead of only the last one."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0017337342724204063,
+    "text_snippet": "I've been to La Bocca a handful of times now, mostly because its one of the few \\\"\"nicer\\\"\" options on Mill.  Because of that it is getting a 4th star but the food and drink only warrant 3. \\n\\nLets just call La Bocca what it is...it's  a starter wine bar for college kids. The wine list is less than",
+    "proposed_fix": "GRU's single final hidden state can forget early-review sentiment on long inputs -- try mean-pooling over all GRU timesteps instead of only the last one."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0019370780792087317,
+    "text_snippet": "Came here during EDC Weekend. Nothing much I can rate on.\\nVERY Cheap if you get rooms with a group of friends.\\nPro: Earls Sandwitch is down stairs. Fat  Tuesday near by. Cheap Casino. \\nCons: You cant help by order it almost everyday until youre over it\\n\\nService: We checked out and I realized I ",
+    "proposed_fix": "GRU's single final hidden state can forget early-review sentiment on long inputs -- try mean-pooling over all GRU timesteps instead of only the last one."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0020253341645002365,
+    "text_snippet": "Soooooo good but server was eh.  Something we ordered came with marinated olives and I didn't know, so when I ordered olives,  she should have said something.   BTW, they come warm.  I'm not used to that.  I prefer cold.",
+    "proposed_fix": "GRU's single final hidden state can forget early-review sentiment on long inputs -- try mean-pooling over all GRU timesteps instead of only the last one."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5001628994941711,
+    "text_snippet": "went to this store while i was at the mall, noticed they sell illegal baby turtles .. nuff said",
+    "proposed_fix": "Add a lightweight temperature-scaling calibration step post-hoc (fit on a held-out calibration split) before thresholding at 0.5."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5046223998069763,
+    "text_snippet": "What a joke. We had an awesome waitress... up till we ordered our meal. She informed us that her shift was ending, so we got stuck with Alex, and over the next five times someone came to the table, we had a different person each time.\\n\\nMy drink ran out three times.\\n\\nNo freakin' way. One time is ",
+    "proposed_fix": "Add a lightweight temperature-scaling calibration step post-hoc (fit on a held-out calibration split) before thresholding at 0.5."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5054076910018921,
+    "text_snippet": "... since las vegas is full of buffets, let me get to the point right away...\\ndont go here !!\\nwe were here for a friends wedding so we really didnt have a choice.",
+    "proposed_fix": "Add a lightweight temperature-scaling calibration step post-hoc (fit on a held-out calibration split) before thresholding at 0.5."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5056393146514893,
+    "text_snippet": "The food wasn't great but the chilled sake was awesome.  Why wouldn't it be?  My mom and I downed a few too many bottles of sake so we ended up napping during most of the O show.  Very unfortunate.  Maybe wew ill have dinner after the show next time.",
+    "proposed_fix": "Add a lightweight temperature-scaling calibration step post-hoc (fit on a held-out calibration split) before thresholding at 0.5."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5070037245750427,
+    "text_snippet": "Ummm, do they really charge almost $20 for full-priced admission? That seems crazy to me! We took advantage of the groupon deal and I still didn't feel like I got a great value.\\n\\nThis was mostly like looking at large fish tanks with average sized fish for an exceptional home aquarium (or an aquari",
+    "proposed_fix": "Add a lightweight temperature-scaling calibration step post-hoc (fit on a held-out calibration split) before thresholding at 0.5."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.15659824013710022,
+    "text_snippet": "My family ate here for the first time recently. The server was friendly, the place was clean and family friendly. Separate bar area with TVs for the sports fans. They had a lot of people at the bar even though it was a Wed night and the place was fairly busy. Husband got a cheeseburger and fries, th",
+    "proposed_fix": "The 'long' length slice has the highest error rate (13.94%) -- truncating at MAX_LEN=150 tokens likely cuts off sentiment-bearing content in long reviews."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.7382916808128357,
+    "text_snippet": "We went here yesterday for lunch, it wasnt packed at all and the lunch prices are good. They start you off with chips and salsa. Nothing special at all, I usually love chips and salsa but this salsa was straight up pace picante or somethng similar. Do not go to this place and expect authentic mexica",
+    "proposed_fix": "The 'long' length slice has the highest error rate (13.94%) -- truncating at MAX_LEN=150 tokens likely cuts off sentiment-bearing content in long reviews."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9440324306488037,
+    "text_snippet": "I give this place 2 stars because of the new car buying experience. I have always owned an Acura and never really encountered problems with buying a new car. I was referred to a salesman Chip, who by the way is amazing!!! He wasn't there at the time and  I wanted to purchase a brand new car, so I sa",
+    "proposed_fix": "The 'long' length slice has the highest error rate (13.94%) -- truncating at MAX_LEN=150 tokens likely cuts off sentiment-bearing content in long reviews."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9927660226821899,
+    "text_snippet": "I dont understand these places - what was once called a second hand store is now a 'Vintage Style Store' and commands huge prices and pretensious customers.\\n\\nThe only times I have been in here I have been for items for a  fancy dress costume, but I have seen others coming in here and buying huge a",
+    "proposed_fix": "The 'long' length slice has the highest error rate (13.94%) -- truncating at MAX_LEN=150 tokens likely cuts off sentiment-bearing content in long reviews."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9348127841949463,
+    "text_snippet": "Love flammable fabrics? Aged 15 and under? Looking for an outfit to wear when you try to get into Cav at the weekend? Then Quiz is the shop for you! Beloved of chavs and tarts alike, Quiz manages to stock an astonishing range of really awful clothes - I challenge you to find me something made of nat",
+    "proposed_fix": "The 'long' length slice has the highest error rate (13.94%) -- truncating at MAX_LEN=150 tokens likely cuts off sentiment-bearing content in long reviews."
+  }
+]

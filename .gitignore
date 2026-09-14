@@ -1,0 +1,26 @@
+# Large shared raw datasets -- regenerate with the download scripts in each task's data/ folder
+# rather than committing (keeps the repo small; see README.md "Shared datasets" section).
+task1_llm/data/*.txt
+task2_sentiment/data/*.parquet
+task3_gan/data/monet_jpg/
+task3_gan/data/photo_jpg/
+task3_gan/data/monet_jpg_test/
+task3_gan/data/photo_jpg_test/
+task3_gan/*/kaggle_submission_images/
+task3_gan/*/images.zip
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Scratch report-preview files (not part of the submission)
+report/_preview_page_*.png

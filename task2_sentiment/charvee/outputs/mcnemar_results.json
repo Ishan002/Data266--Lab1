@@ -1,0 +1,14 @@
+{
+  "experimental_gru": {
+    "n01_a_only_correct": 189,
+    "n10_b_only_correct": 372,
+    "statistic": 59.0445632798574,
+    "p_value": 1.5432100042289676e-14
+  },
+  "experimental_dilated_cnn": {
+    "n01_a_only_correct": 243,
+    "n10_b_only_correct": 355,
+    "statistic": 20.603678929765888,
+    "p_value": 5.648746019715212e-06
+  }
+}

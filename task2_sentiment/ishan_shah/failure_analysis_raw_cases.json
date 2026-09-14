@@ -1,0 +1,162 @@
+[
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9996050000190735,
+    "text_snippet": "Love that they have Four Peaks beer on tap, including my favorite, Hop Knot. But I'm wishing I had made a different food choice. l ordered the grilled cheese with creamy tomato soup. Because I figured it was impossible to go wrong with a comfort food staple and I'm tired of burgers at the airport. I",
+    "proposed_fix": "Add stronger negation-handling features (e.g. bigram features for 'not good') so sarcasm/negated praise isn't misread as positive."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.999298095703125,
+    "text_snippet": "Prices at mad pita are pretty cool, the service is great, there's fishes floating around in vases on the table...\\n\\nAnd...my gyro meat wasn't roasted and carved off the spit how I like it :(\\n\\nGyro meat is in strips and fried on a skillet top; not how I prefer. The lettuce and veggies were fresh, ",
+    "proposed_fix": "Add stronger negation-handling features (e.g. bigram features for 'not good') so sarcasm/negated praise isn't misread as positive."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9986788630485535,
+    "text_snippet": "TRES VECES, la orden me ha salido mal!  No recomiendo este lugar para comida salvadorena.\\n\\nTrate darle otra oportunidad pero despues de haber recivido la comida mal en tres diferentes ocasiones, ya no mas!\\n\\nEl pollo, el pescado simple y reseco!  Y cuando se le comunica el problema no se hacen re",
+    "proposed_fix": "Add stronger negation-handling features (e.g. bigram features for 'not good') so sarcasm/negated praise isn't misread as positive."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9983893632888794,
+    "text_snippet": "The food was amazing but the price a bit steep and atmosphere truly odd. It was hard to wrap my mind around a delicious $20 entree that was served on a picnic table next to a jaw-breaker machine, pop-dispenser, and a host of other chachke items that made the place feel messy. If the food could be se",
+    "proposed_fix": "Add stronger negation-handling features (e.g. bigram features for 'not good') so sarcasm/negated praise isn't misread as positive."
+  },
+  {
+    "error_type": "confident_false_positive",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9978792667388916,
+    "text_snippet": "The inside is amazing!!!! @#$%& them for their cover, and not having an ATM or a situationlike Vintage where they escort you to the bartender. They serve em up strong here though. Definitely a place to get messed up at. Especially if you are on the Molly.  Their demographic Is ghetto, wanna feel, be",
+    "proposed_fix": "Add stronger negation-handling features (e.g. bigram features for 'not good') so sarcasm/negated praise isn't misread as positive."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0002627333451528102,
+    "text_snippet": "The steaks here are very good.  It's the same quality as the other high end places (prime cuts, aged, etc.).  However, I love the fact that they serve them on  platters sizzling with butter.  That's something somewhat unique compared to some of the other shops.  I love the sound of the sizzle as the",
+    "proposed_fix": "Increase max sequence length / attention to later sentences -- long reviews may bury the sentiment-bearing clause beyond the pooled window."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0005659401649609208,
+    "text_snippet": "Fox Car Rental is a discount car rental agency, so expect long lines on both ends of the transaction; however, the drop off was much more efficient than the pick up. \\n\\nIn the afternoon it gets extremely busy. I suggest trying for a morning or late evening pick up/drop off, if possible. \\n\\nThe rat",
+    "proposed_fix": "Increase max sequence length / attention to later sentences -- long reviews may bury the sentiment-bearing clause beyond the pooled window."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0009842648869380355,
+    "text_snippet": "I had never used Sixt before, but did so over the holidays since they were about 33% cheaper than any of the \\\"\"major\\\"\" rental companies. I had used Fox and Payless in the past and did not have good experiences, so I was a little wary about trying Sixt.\\n\\nWhen we arrived at the counter, we were th",
+    "proposed_fix": "Increase max sequence length / attention to later sentences -- long reviews may bury the sentiment-bearing clause beyond the pooled window."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0011039406526833773,
+    "text_snippet": "Clean rooms. We stayed in the Tower Suite and everything was great :) except for the fact that our TV was too small. Room service sucked, called down to ask for toilet paper and towels. Only brought us towels (we forgot we wanted toilet paper also). Called down again the next day and asked for toile",
+    "proposed_fix": "Increase max sequence length / attention to later sentences -- long reviews may bury the sentiment-bearing clause beyond the pooled window."
+  },
+  {
+    "error_type": "confident_false_negative",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.0016596303321421146,
+    "text_snippet": "Came here back in June for the Britney Spears concert with my daughter. Not the best accoustics, but still a fairly nice venue. This was the most bizarre concert I've ever attended. It's not the venue's fault, but it was a weird experience. We sat in the unfixed seats in the back, just above the fir",
+    "proposed_fix": "Increase max sequence length / attention to later sentences -- long reviews may bury the sentiment-bearing clause beyond the pooled window."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.4992196261882782,
+    "text_snippet": "it took me awhile to actually find this place.  but it was well worth the wasted gas.\\n\\nthe burritos, tacos, beans, rice are all good.  the food is top notch.\\n\\nif you go during lunch on a work week be prepared to wait in line to order and fight for an available table.  the food is worth the fight",
+    "proposed_fix": "Calibrate the decision threshold per length-slice instead of a fixed 0.5 cutoff (see per-slice metrics)."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.4983118176460266,
+    "text_snippet": "Very nice selection of quality foods.",
+    "proposed_fix": "Calibrate the decision threshold per length-slice instead of a fixed 0.5 cutoff (see per-slice metrics)."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.498062402009964,
+    "text_snippet": "Above-average United Club, 3rd Level, Terminal 3.\\n\\nPluses: \\n* Open almost 24 hours:  4:30 to after midnight to serve the Red Eye flights\\n* Friendly, helpful staff including Front Desk and Bartenders\\n* Clean, modern facility with comfortable seating and abundant A/C outlets\\n* Even serves bourbo",
+    "proposed_fix": "Calibrate the decision threshold per length-slice instead of a fixed 0.5 cutoff (see per-slice metrics)."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5124041438102722,
+    "text_snippet": "It's cheap, it's clean but slow as molasses. I've been waiting for 40 minutes to leave the airport and our driver is outside speaking to a colleague. I wish they could figure out their issues some other time.\\n\\n(This is based on an experience in January 2013, during CES)",
+    "proposed_fix": "Calibrate the decision threshold per length-slice instead of a fixed 0.5 cutoff (see per-slice metrics)."
+  },
+  {
+    "error_type": "near_threshold",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.5192977786064148,
+    "text_snippet": "A small coffee is now $2.50 \\n\\n\\n\\nLol.",
+    "proposed_fix": "Calibrate the decision threshold per length-slice instead of a fixed 0.5 cutoff (see per-slice metrics)."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.942828357219696,
+    "text_snippet": "My husband and I wanted to try something new for date night and I've known about Bachi Burger for years through Yelp as \\\"\"one of the best burgers in Las Vegas\\\"\" as well as all of my friends constantly obsessing over it. We got here on a Friday night with a 25 minute wait which wasn't a big deal be",
+    "proposed_fix": "The 'long' length slice has the highest error rate (14.68%) -- oversample this slice during training."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.7220335602760315,
+    "text_snippet": "I used to live on rue bourget and the four years that i did and apparently many before this location sat empty. \\nI drink a fair amount of espresso based coffee, the first coffee I ever drank was an espresso, so you can imagine I was excited at the prospect of being able to get one at the corner of ",
+    "proposed_fix": "The 'long' length slice has the highest error rate (14.68%) -- oversample this slice during training."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 1,
+    "pred_label": 0,
+    "prob_class1": 0.019765272736549377,
+    "text_snippet": "Holy cow I am so glad I was talked into coming here and trying it out. I was a little apprehensive at first since I was not sure what this place entailed. If it is your first time there the servers warn you not to expect large portions and suggest you order several plates if you want more of a varie",
+    "proposed_fix": "The 'long' length slice has the highest error rate (14.68%) -- oversample this slice during training."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.9323757290840149,
+    "text_snippet": "I am giving a generous 2 stars only because I had a good experience last year.   \\n\\nFirst, I am not a bike novice, but to these douche bags, everyone else is.  I may not have the highest end bikes, but I do own a $3500 a trek carbon road bike and a $4k specialized stumpjumper.  I have been riding b",
+    "proposed_fix": "The 'long' length slice has the highest error rate (14.68%) -- oversample this slice during training."
+  },
+  {
+    "error_type": "slice_specific_failure (long reviews)",
+    "true_label": 0,
+    "pred_label": 1,
+    "prob_class1": 0.888860821723938,
+    "text_snippet": "To preface my review, I need to mention that my partner and I tried Faberg\\u00e9 on a busy Saturday morning. Needless to say, I feel like it may have been par for the busy course that the staff was not on their a-game. Nonetheless, certain details to our experience left something to be desired about",
+    "proposed_fix": "The 'long' length slice has the highest error rate (14.68%) -- oversample this slice during training."
+  }
+]

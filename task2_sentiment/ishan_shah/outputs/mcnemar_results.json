@@ -1,0 +1,14 @@
+{
+  "experimental_textcnn": {
+    "n01_a_only_correct": 143,
+    "n10_b_only_correct": 121,
+    "statistic": 1.6704545454545454,
+    "p_value": 0.19619766291266105
+  },
+  "experimental_bilstm": {
+    "n01_a_only_correct": 152,
+    "n10_b_only_correct": 132,
+    "statistic": 1.2711267605633803,
+    "p_value": 0.2595554067870388
+  }
+}
