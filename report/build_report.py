@@ -23,7 +23,7 @@ from reportlab.platypus import (
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEAM_NUMBER = "[Team Number]"  # fill in once assigned on Canvas
-GITHUB_URL = "TO BE ADDED — see README.md for the exact `git remote add` / push commands"
+GITHUB_URL = "https://github.com/Ishan002/Data266--Lab1"
 
 OUT_PATH = os.path.join(ROOT, "report", f"DATA266_Lab1_Report_Team_{TEAM_NUMBER}.pdf")
 
@@ -107,7 +107,7 @@ story.append(Paragraph("DATA266 Lab 1 — Fall 2026", styles["TitleBig"]))
 story.append(Paragraph("LLM Pretraining · Sentiment Classification · CycleGAN Style Transfer", styles["Caption"]))
 story.append(Spacer(1, 0.4 * inch))
 story.append(Paragraph(f"Team {TEAM_NUMBER}", styles["H1"]))
-story.append(Paragraph("Members: Ishan Shah, Charvee", styles["Body"]))
+story.append(Paragraph("Members: Ishan Shah, Charvee Saraiya", styles["Body"]))
 story.append(Paragraph(f"GitHub repository: {GITHUB_URL}", styles["Body"]))
 story.append(PageBreak())
 
@@ -120,7 +120,7 @@ body(
     "all three tasks. <b>Ishan Shah</b> built a Pre-LayerNorm character-level GPT (Task 1), "
     "three from-scratch Yelp Polarity classifiers — a mean-pooled neural bag-of-words baseline, "
     "a multi-kernel TextCNN, and a bidirectional LSTM (Task 2) — and a ResNet-generator, "
-    "LSGAN-loss CycleGAN with identity loss (Task 3). <b>Charvee</b> built an independently "
+    "LSGAN-loss CycleGAN with identity loss (Task 3). <b>Charvee Saraiya</b> built an independently "
     "architected Post-LayerNorm character-level GPT (Task 1), three differently-designed Yelp "
     "Polarity classifiers — a max-pooled MLP baseline, a unidirectional GRU, and a dilated 1D "
     "CNN (Task 2) — and a U-Net-generator, vanilla-GAN-loss CycleGAN without identity loss "
@@ -139,16 +139,16 @@ story.append(PageBreak())
 h1("Task 1 — GPT-Style LLM From Scratch (TinyStories, character-level)")
 
 t1_ishan = pd.read_csv(os.path.join(ROOT, "task1_llm", "ishan_shah", "metrics_report.csv")).iloc[0]
-t1_charvee = pd.read_csv(os.path.join(ROOT, "task1_llm", "charvee", "metrics_report.csv")).iloc[0]
+t1_charvee_saraiya = pd.read_csv(os.path.join(ROOT, "task1_llm", "charvee_saraiya", "metrics_report.csv")).iloc[0]
 
 h2("Architecture & hyperparameters")
-arch_rows = [["", "Ishan Shah", "Charvee"]]
+arch_rows = [["", "Ishan Shah", "Charvee Saraiya"]]
 for label, key in [
     ("Block style", "architecture"), ("Layers", "n_layer"), ("Heads", "n_head"),
     ("Embedding dim", "n_embd"), ("Block size", "block_size"), ("Dropout", "dropout"),
     ("Epochs", "epochs"), ("Batch size", "batch_size"), ("Peak LR", "peak_lr"),
 ]:
-    arch_rows.append([label, str(t1_ishan[key]), str(t1_charvee[key])])
+    arch_rows.append([label, str(t1_ishan[key]), str(t1_charvee_saraiya[key])])
 story.append(small_table(arch_rows, col_widths=[1.6 * inch, 2.7 * inch, 2.7 * inch]))
 story.append(Spacer(1, 10))
 
@@ -164,9 +164,9 @@ metric_keys_1 = [
     ("Gen tokens/sec", "gen_tokens_per_sec"), ("Peak memory (MB)", "peak_memory_MB"),
     ("Total train time (s)", "total_training_time_sec"),
 ]
-rows = [["Metric", "Ishan Shah", "Charvee"]]
+rows = [["Metric", "Ishan Shah", "Charvee Saraiya"]]
 for label, key in metric_keys_1:
-    v1, v2 = t1_ishan[key], t1_charvee[key]
+    v1, v2 = t1_ishan[key], t1_charvee_saraiya[key]
     rows.append([label, fmt_num(v1), fmt_num(v2)])
 story.append(small_table(rows, col_widths=[2.0 * inch, 2.5 * inch, 2.5 * inch]))
 
@@ -174,19 +174,19 @@ story.append(PageBreak())
 h2("Loss curves")
 add_image(os.path.join(ROOT, "task1_llm", "ishan_shah", "outputs", "loss_curve.png"), width=5.5*inch,
           caption="Ishan Shah — Pre-LN GPT train/val loss.")
-add_image(os.path.join(ROOT, "task1_llm", "charvee", "outputs", "loss_curve.png"), width=5.5*inch,
-          caption="Charvee — Post-LN GPT train/val loss.")
+add_image(os.path.join(ROOT, "task1_llm", "charvee_saraiya", "outputs", "loss_curve.png"), width=5.5*inch,
+          caption="Charvee Saraiya — Post-LN GPT train/val loss.")
 
 h2("Joint analysis")
 body(
     "<b>Strengths:</b> both from-scratch character-level GPTs train stably (zero NaNs, "
     "bounded gradient norms) and converge to sensible perplexities (7.3 and 5.7) given the "
-    "very small 100K-character training budget. Charvee's deeper (6-layer) Post-LN model "
+    "very small 100K-character training budget. Charvee Saraiya's deeper (6-layer) Post-LN model "
     "reaches a lower validation loss and higher next-character accuracy than Ishan's "
     "shallower (4-layer) Pre-LN model, suggesting depth mattered more than width at this scale."
 )
 body(
-    "<b>Weaknesses/limitations:</b> Charvee's model shows a larger generalization gap "
+    "<b>Weaknesses/limitations:</b> Charvee Saraiya's model shows a larger generalization gap "
     "(0.106 vs 0.049) and a much higher peak gradient norm (14.1 vs 4.4), the expected "
     "instability cost of Post-LN training at depth without Pre-LN's gradient renormalization. "
     "Both models' generations are qualitatively similar failure-wise — greedy-decoding "
@@ -208,8 +208,8 @@ story.append(PageBreak())
 h1("Task 2 — Yelp Polarity Sentiment Classification")
 
 t2_ishan = pd.read_csv(os.path.join(ROOT, "task2_sentiment", "ishan_shah", "metrics_report.csv"))
-t2_charvee = pd.read_csv(os.path.join(ROOT, "task2_sentiment", "charvee", "metrics_report.csv"))
-t2_all = pd.concat([t2_ishan.assign(member="Ishan Shah"), t2_charvee.assign(member="Charvee")], ignore_index=True)
+t2_charvee_saraiya = pd.read_csv(os.path.join(ROOT, "task2_sentiment", "charvee_saraiya", "metrics_report.csv"))
+t2_all = pd.concat([t2_ishan.assign(member="Ishan Shah"), t2_charvee_saraiya.assign(member="Charvee Saraiya")], ignore_index=True)
 
 h2("All 6 models: architecture & core metrics")
 core_cols = [
@@ -265,7 +265,7 @@ body(
     "not beat the simple mean-pooled baseline on his 3,000-review test set."
 )
 body(
-    "<b>Charvee:</b> baseline_maxpool_mlp vs. experimental_gru p=1.5e-14 (highly significant); "
+    "<b>Charvee Saraiya:</b> baseline_maxpool_mlp vs. experimental_gru p=1.5e-14 (highly significant); "
     "baseline_maxpool_mlp vs. experimental_dilated_cnn p=5.6e-6 (highly significant) — both "
     "experimental models are genuinely, not just numerically, better than her baseline."
 )
@@ -274,8 +274,8 @@ story.append(PageBreak())
 h2("Confusion matrices and loss curves")
 add_image(os.path.join(ROOT, "task2_sentiment", "ishan_shah", "outputs", "confusion_matrices.png"), width=6.3*inch,
           caption="Ishan Shah — confusion matrices, all 3 models.")
-add_image(os.path.join(ROOT, "task2_sentiment", "charvee", "outputs", "confusion_matrices.png"), width=6.3*inch,
-          caption="Charvee — confusion matrices, all 3 models.")
+add_image(os.path.join(ROOT, "task2_sentiment", "charvee_saraiya", "outputs", "confusion_matrices.png"), width=6.3*inch,
+          caption="Charvee Saraiya — confusion matrices, all 3 models.")
 
 h2("Joint analysis")
 body(
@@ -287,14 +287,14 @@ body(
 body(
     "<b>Weaknesses/limitations:</b> the two members' baseline-vs-experimental patterns "
     "diverge sharply — Ishan's added architecture (TextCNN/BiLSTM) does not significantly "
-    "beat his NBOW baseline (McNemar p>0.05 both), while Charvee's does (p<1e-5 both). Both "
+    "beat his NBOW baseline (McNemar p>0.05 both), while Charvee Saraiya's does (p<1e-5 both). Both "
     "members independently found the 'long review' length slice to be the hardest for almost "
-    "every model, and calibration (ECE) tends to get worse as accuracy improves for Charvee's "
+    "every model, and calibration (ECE) tends to get worse as accuracy improves for Charvee Saraiya's "
     "models — a real trade-off worth flagging."
 )
 body(
     "<b>What we'd try next:</b> apply temperature-scaling calibration post-hoc on the "
-    "best-performing model from each member; test whether Ishan's stemmed vs. Charvee's "
+    "best-performing model from each member; test whether Ishan's stemmed vs. Charvee Saraiya's "
     "unstemmed preprocessing is the reason her baseline starts weaker relative to her "
     "experimental models, by swapping preprocessing pipelines across each other's "
     "architectures as a follow-up ablation."
@@ -307,17 +307,17 @@ story.append(PageBreak())
 h1("Task 3 — CycleGAN Image Style Transfer (Monet ↔ Photo)")
 
 t3_ishan = pd.read_csv(os.path.join(ROOT, "task3_gan", "ishan_shah", "metrics_report.csv")).iloc[0]
-t3_charvee_path = os.path.join(ROOT, "task3_gan", "charvee", "metrics_report.csv")
-t3_charvee = pd.read_csv(t3_charvee_path).iloc[0] if os.path.exists(t3_charvee_path) else None
+t3_charvee_saraiya_path = os.path.join(ROOT, "task3_gan", "charvee_saraiya", "metrics_report.csv")
+t3_charvee_saraiya = pd.read_csv(t3_charvee_saraiya_path).iloc[0] if os.path.exists(t3_charvee_saraiya_path) else None
 
 h2("Architecture & hyperparameters")
-arch_rows = [["", "Ishan Shah", "Charvee"]]
+arch_rows = [["", "Ishan Shah", "Charvee Saraiya"]]
 for label, key in [
     ("Architecture", "architecture"), ("Image size", "img_size"), ("Epochs", "epochs"),
     ("Batch size", "batch_size"), ("Lambda cycle", "lambda_cycle"), ("Lambda identity", "lambda_identity"),
     ("Train Monet imgs", "n_train_monet"), ("Train photo imgs", "n_train_photo"),
 ]:
-    v2 = str(t3_charvee[key]) if t3_charvee is not None else "pending"
+    v2 = str(t3_charvee_saraiya[key]) if t3_charvee_saraiya is not None else "pending"
     arch_rows.append([label, str(t3_ishan[key]), v2])
 story.append(small_table(arch_rows, col_widths=[1.5 * inch, 3.0 * inch, 3.0 * inch]))
 story.append(Spacer(1, 10))
@@ -337,10 +337,10 @@ metric_keys_3 = [
     ("Train images/sec", "train_images_per_sec"), ("Gen images/sec", "gen_images_per_sec"),
     ("Peak memory (MB)", "peak_memory_MB"),
 ]
-rows = [["Metric", "Ishan Shah", "Charvee"]]
+rows = [["Metric", "Ishan Shah", "Charvee Saraiya"]]
 for label, key in metric_keys_3:
     v1 = t3_ishan[key] if key in t3_ishan else "n/a"
-    v2 = (t3_charvee[key] if (t3_charvee is not None and key in t3_charvee) else "pending")
+    v2 = (t3_charvee_saraiya[key] if (t3_charvee_saraiya is not None and key in t3_charvee_saraiya) else "pending")
     rows.append([label, fmt_num(v1), fmt_num(v2)])
 story.append(small_table(rows, col_widths=[2.1 * inch, 2.3 * inch, 2.3 * inch]))
 
@@ -370,11 +370,11 @@ add_image(os.path.join(ROOT, "task3_gan", "ishan_shah", "outputs", "loss_curves.
           caption="Ishan Shah — ResNet/LSGAN CycleGAN loss curves.")
 add_image(os.path.join(ROOT, "task3_gan", "ishan_shah", "outputs", "pred_B2A", "sample_grid.png"), width=6.3*inch,
           caption="Ishan Shah — sample photo→Monet translations (test set).")
-if t3_charvee is not None:
-    add_image(os.path.join(ROOT, "task3_gan", "charvee", "outputs", "loss_curves.png"), width=6.3*inch,
-              caption="Charvee — U-Net/vanilla-GAN CycleGAN loss curves.")
-    add_image(os.path.join(ROOT, "task3_gan", "charvee", "outputs", "pred_B2A", "sample_grid.png"), width=6.3*inch,
-              caption="Charvee — sample photo→Monet translations (test set).")
+if t3_charvee_saraiya is not None:
+    add_image(os.path.join(ROOT, "task3_gan", "charvee_saraiya", "outputs", "loss_curves.png"), width=6.3*inch,
+              caption="Charvee Saraiya — U-Net/vanilla-GAN CycleGAN loss curves.")
+    add_image(os.path.join(ROOT, "task3_gan", "charvee_saraiya", "outputs", "pred_B2A", "sample_grid.png"), width=6.3*inch,
+              caption="Charvee Saraiya — sample photo→Monet translations (test set).")
 
 h2("Joint analysis")
 body(

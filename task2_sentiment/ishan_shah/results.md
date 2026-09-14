@@ -78,10 +78,10 @@ See [`failure_analysis.md`](failure_analysis.md) for the 20-case manual error re
 (5 confident false positives, 5 confident false negatives, 5 near-threshold, 5 slice-specific
 failures) on the BiLSTM model, each with a proposed testable fix.
 
-## How this compares to Charvee's models
+## How this compares to Charvee Saraiya's models
 
 See the team report's Task 2 comparison table for the full six-model side-by-side. At a
-glance: Charvee's GRU experimental model (87.0% accuracy) outperforms her own max-pool MLP
+glance: Charvee Saraiya's GRU experimental model (87.0% accuracy) outperforms her own max-pool MLP
 baseline (80.9%) by a statistically significant margin (McNemar p≈1.5e-14) — a much larger
 and clearer baseline-vs-experimental gap than either of my own experimental models showed
 over my NBOW baseline, suggesting her un-stemmed preprocessing + recurrent architecture

@@ -30,7 +30,7 @@ offset 0), validated on the following 10,000 characters.
 - Weight tying was chosen to cut parameter count meaningfully at this scale (the embedding
   table would otherwise be ~30% of all parameters) without hurting quality.
 - Pre-LN was chosen over Post-LN specifically so the two teammates' implementations would
-  differ architecturally, not just numerically (Charvee's uses Post-LN — see her
+  differ architecturally, not just numerically (Charvee Saraiya's uses Post-LN — see her
   `results.md` for the comparison).
 
 ## Training
@@ -75,9 +75,9 @@ See [`failure_analysis.md`](failure_analysis.md) for three annotated generation 
 (repetition under greedy decoding, broken-word grammar under sampling, and a training-format
 artifact leaking into generated text).
 
-## How this compares to Charvee's model
+## How this compares to Charvee Saraiya's model
 
-Charvee's model is deeper-but-narrower (6 layers, 96-dim vs. my 4 layers, 96-dim... actually
+Charvee Saraiya's model is deeper-but-narrower (6 layers, 96-dim vs. my 4 layers, 96-dim... actually
 128-dim), Post-LN instead of Pre-LN, ReLU instead of GELU, untied instead of tied head, and
 trained on an independent, non-overlapping 100K-character slice starting at character
 150,000 of the shared corpus. Her model reached a lower final validation loss (1.73 vs. 1.98)

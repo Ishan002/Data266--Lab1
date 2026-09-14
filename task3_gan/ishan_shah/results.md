@@ -34,7 +34,7 @@ hundreds of epochs) to fit training within a single GPU session.
 
 This is the closest-to-canonical CycleGAN configuration, chosen as my baseline
 implementation to validate correctness against the well-documented original paper before
-any deviation. Charvee's implementation deliberately diverges (U-Net generator, BatchNorm,
+any deviation. Charvee Saraiya's implementation deliberately diverges (U-Net generator, BatchNorm,
 vanilla GAN loss, no identity loss) to give the team a genuine architecture-choice
 comparison rather than two near-identical models.
 
@@ -81,9 +81,9 @@ inference, no manual editing) ready for `kaggle competitions submit`. Actual sub
 
 See [`failure_analysis.md`](failure_analysis.md).
 
-## How this compares to Charvee's model
+## How this compares to Charvee Saraiya's model
 
-Charvee's U-Net/BatchNorm/vanilla-GAN model achieved notably better FID scores in both
+Charvee Saraiya's U-Net/BatchNorm/vanilla-GAN model achieved notably better FID scores in both
 directions (3.28/1.88 vs. my 6.29/4.18) and trained roughly 1.7× faster per epoch on
 average, but her generator's gradient norm grew steadily across training (53→315) with no
 gradient clipping, an instability signature my LSGAN+InstanceNorm+identity-loss combination

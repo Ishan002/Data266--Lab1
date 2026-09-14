@@ -4,7 +4,7 @@ audit sheets. Run this AFTER both raters have independently filled in their own 
 audit_sheet_template.csv (see README.md in this folder).
 
 Usage:
-    python compute_agreement.py rater_ishan.csv rater_charvee.csv
+    python compute_agreement.py rater_ishan.csv rater_charvee_saraiya.csv
 """
 import sys
 import os

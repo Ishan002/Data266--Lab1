@@ -10,7 +10,7 @@ deterministically so both raters see the same set) and writes:
   - audit_sheet_template.csv -- what each rater actually fills in: sample_id + three empty
     columns (style_score, content_score, artifact_free_score), 1-5 Likert each
 
-This only builds the blinded sheet. The actual audit -- two humans (Ishan and Charvee)
+This only builds the blinded sheet. The actual audit -- two humans (Ishan and Charvee Saraiya)
 independently rating all 30 images -- has to happen outside this script; see
 task3_gan/human_audit/README.md.
 """
@@ -26,7 +26,7 @@ ROOT = os.path.dirname(HERE)
 AUDIT_IMG_DIR = os.path.join(HERE, "audit_images")
 os.makedirs(AUDIT_IMG_DIR, exist_ok=True)
 
-members = ["ishan_shah", "charvee"]
+members = ["ishan_shah", "charvee_saraiya"]
 n_per_member = 15
 
 rows = []

@@ -1,4 +1,4 @@
-# Task 1 — Sequence Model Failure Analysis (Charvee)
+# Task 1 — Sequence Model Failure Analysis (Charvee Saraiya)
 
 Model: Post-LN char-GPT, 6 layers / 4 heads / 96-dim, trained 60 epochs on an independent
 100K-char TinyStories slice (offset 150,000). Three failure cases below, drawn from
@@ -55,7 +55,7 @@ sentence — expected given the 96-token attention window and the small training
 
 ## Takeaway
 
-Charvee's deeper (6-layer) Post-LN model achieves better next-character statistics overall
+Charvee Saraiya's deeper (6-layer) Post-LN model achieves better next-character statistics overall
 (lower val loss, higher top-1 accuracy — see `metrics_report.csv`) but shows the same three
 qualitative failure modes as the shallower Pre-LN model: greedy repetition, broken word
 formation under sampling, and short-range-only coherence. This suggests these failures are

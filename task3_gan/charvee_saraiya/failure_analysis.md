@@ -1,4 +1,4 @@
-# Task 3 — Evaluation & Failure Analysis (Charvee)
+# Task 3 — Evaluation & Failure Analysis (Charvee Saraiya)
 
 ## Visual quality assessment
 

@@ -1,5 +1,5 @@
 """
-Task 3 -- local evaluation + Kaggle submission generator (Charvee).
+Task 3 -- local evaluation + Kaggle submission generator (Charvee Saraiya).
 
 Loads the trained G_AB checkpoint (photo -> Monet direction) and produces `submission.csv`-
 style output: a folder of generated Monet-style images from real photos, zipped as
@@ -12,7 +12,7 @@ real photos.
 Usage:
     python evaluate_local.py
 Then submit yourself with your own Kaggle account:
-    kaggle competitions submit -c <competition-slug> -f images.zip -m "Charvee CycleGAN"
+    kaggle competitions submit -c <competition-slug> -f images.zip -m "Charvee Saraiya CycleGAN"
 """
 import glob
 import os

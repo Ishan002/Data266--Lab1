@@ -1,6 +1,6 @@
 """
 Task 1 -- GPT-style LLM from scratch (character-level), TinyStories.
-Author: Charvee
+Author: Charvee Saraiya
 
 Architecture (own design, deliberately different from teammate's, no prebuilt
 Transformer/attention modules):
@@ -38,7 +38,7 @@ PEAK_LR = 5e-4
 WARMUP_FRAC = 0.1
 TRAIN_CHARS = 100_000
 VAL_CHARS = 10_000
-DATA_OFFSET = 150_000  # Charvee's independent slice (non-overlapping with Ishan's 0:110_000)
+DATA_OFFSET = 150_000  # Charvee Saraiya's independent slice (non-overlapping with Ishan's 0:110_000)
 
 try:
     HERE = os.path.dirname(os.path.abspath(__file__))
@@ -310,7 +310,7 @@ plt.plot(history["epoch"], history["train_loss"], label="train loss")
 plt.plot(history["epoch"], history["val_loss"], label="val loss")
 plt.xlabel("epoch")
 plt.ylabel("cross-entropy loss")
-plt.title("Charvee -- GPT-scratch (Post-LN) training curves")
+plt.title("Charvee Saraiya -- GPT-scratch (Post-LN) training curves")
 plt.legend()
 plt.tight_layout()
 plt.savefig(os.path.join(OUT_DIR, "loss_curve.png"), dpi=130)
@@ -368,7 +368,7 @@ bpc = final_val_loss / math.log(2)
 gen_gap = final_val_loss - final_train_loss
 
 metrics_row = {
-    "member": "Charvee",
+    "member": "Charvee Saraiya",
     "architecture": "Post-LN Transformer, untied head, ReLU FFN",
     "n_layer": N_LAYER, "n_head": N_HEAD, "n_embd": N_EMBD, "block_size": BLOCK_SIZE,
     "dropout": DROPOUT, "epochs": N_EPOCHS, "batch_size": BATCH_SIZE, "peak_lr": PEAK_LR,
@@ -402,9 +402,9 @@ with open(metrics_csv_path, "w", newline="") as f:
 with open(os.path.join(OUT_DIR, "history.json"), "w") as f:
     json.dump(history, f, indent=2)
 
-torch.save(model.state_dict(), os.path.join(CKPT_DIR, "gpt_charvee.pt"))
+torch.save(model.state_dict(), os.path.join(CKPT_DIR, "gpt_charvee_saraiya.pt"))
 log_f.close()
 
-print("\n=== FINAL METRICS (Charvee) ===")
+print("\n=== FINAL METRICS (Charvee Saraiya) ===")
 for k, v in metrics_row.items():
     print(f"{k}: {v}")

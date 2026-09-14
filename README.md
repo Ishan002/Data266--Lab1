@@ -1,6 +1,8 @@
 # DATA266 Lab 1 — Fall 2026 — Team [Team Number]
 
-**Members:** Ishan Shah, Charvee
+**Members:** Ishan Shah, Charvee Saraiya
+
+**Repository:** https://github.com/Ishan002/Data266--Lab1
 
 LLM Pretraining · Sentiment Classification · CycleGAN Style Transfer
 
@@ -77,15 +79,15 @@ team-repo/
 ├── task1_llm/
 │   ├── data/                     <- shared TinyStories corpus (download script + raw text)
 │   ├── ishan_shah/                <- Pre-LN GPT, 4L/4H/128d
-│   └── charvee/                   <- Post-LN GPT, 6L/4H/96d
+│   └── charvee_saraiya/                   <- Post-LN GPT, 6L/4H/96d
 ├── task2_sentiment/
 │   ├── data/                     <- shared Yelp Polarity parquet (download script)
 │   ├── ishan_shah/                <- NBOW / TextCNN / BiLSTM
-│   └── charvee/                   <- MaxPool-MLP / GRU / Dilated-CNN
+│   └── charvee_saraiya/                   <- MaxPool-MLP / GRU / Dilated-CNN
 ├── task3_gan/
 │   ├── data/                     <- shared Monet/Photo images (download script)
 │   ├── ishan_shah/                <- ResNet generator, LSGAN, InstanceNorm
-│   └── charvee/                   <- U-Net generator, vanilla GAN, BatchNorm
+│   └── charvee_saraiya/                   <- U-Net generator, vanilla GAN, BatchNorm
 ├── common/                       <- shared *measurement-only* evaluation utilities
 │   ├── eval_classifier.py        <- Task 2 metrics (both members call this identically)
 │   ├── eval_gan.py               <- Task 3 metrics (FID/KID/LPIPS/content-similarity)

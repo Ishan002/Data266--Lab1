@@ -42,7 +42,7 @@ invertible, as CycleGAN requires in the absence of paired supervision.
 - Gradient norm for the combined generators peaks at 30.1 and *decreases* over the second
   half of training (correlating with the linear LR decay from epoch 20), suggesting the LSGAN
   loss + InstanceNorm + identity-loss combination trains in a well-behaved regime at this
-  scale — unlike Charvee's model, whose gradient norm grows through the entire run (see her
+  scale — unlike Charvee Saraiya's model, whose gradient norm grows through the entire run (see her
   `failure_analysis.md`).
 - Identity loss (0.307→0.123) and cycle loss decrease together, consistent with both
   regularizers pulling the model in compatible directions rather than fighting each other.

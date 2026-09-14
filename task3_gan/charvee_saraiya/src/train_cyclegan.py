@@ -1,6 +1,6 @@
 """
 Task 3 -- CycleGAN Image Style Transfer (Monet <-> Photo).
-Author: Charvee
+Author: Charvee Saraiya
 
 Architecture (own design, deliberately different from teammate's):
   - Generator: U-Net-style encoder-decoder with skip connections (4 downsampling /
@@ -353,7 +353,7 @@ fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
 axes[0].plot(history["epoch"], history["loss_G"], label="G total")
 axes[0].plot(history["epoch"], history["loss_D"], label="D (avg A/B)")
 axes[0].set_xlabel("epoch"); axes[0].set_ylabel("loss"); axes[0].legend()
-axes[0].set_title("Charvee -- Generator/Discriminator loss")
+axes[0].set_title("Charvee Saraiya -- Generator/Discriminator loss")
 axes[1].plot(history["epoch"], history["loss_cycle"], label="cycle", color="darkorange")
 axes[1].set_xlabel("epoch"); axes[1].set_ylabel("loss"); axes[1].legend()
 axes[1].set_title("Cycle-consistency loss (no identity loss term)")
@@ -425,7 +425,7 @@ lpips_A2B = lpips_distance(real_A_test, fake_B_test, device=device)
 lpips_B2A = lpips_distance(real_B_test, fake_A_test, device=device)
 
 final_metrics = {
-    "member": "Charvee",
+    "member": "Charvee Saraiya",
     "architecture": "U-Net generator (4 down/up, skip connections, BatchNorm) + PatchGAN, vanilla GAN loss, no identity loss",
     "img_size": IMG_SIZE, "epochs": EPOCHS, "batch_size": BATCH_SIZE,
     "lambda_cycle": LAMBDA_CYCLE, "lambda_identity": 0.0,
@@ -456,6 +456,6 @@ with open(os.path.join(HERE, "full_metrics_report.csv"), "w", newline="") as f:
     w.writeheader()
     w.writerow(final_metrics)
 
-print("\n=== FINAL METRICS (Charvee, Task 3) ===")
+print("\n=== FINAL METRICS (Charvee Saraiya, Task 3) ===")
 for k, v in final_metrics.items():
     print(f"{k}: {v}")

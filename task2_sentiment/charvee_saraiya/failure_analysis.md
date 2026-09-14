@@ -1,4 +1,4 @@
-# Task 2 — Manual Error Review (Charvee)
+# Task 2 — Manual Error Review (Charvee Saraiya)
 
 Model reviewed: `experimental_gru` (my best-performing model). 20 errors reviewed on the
 3,000-review test set: 5 confident false positives, 5 confident false negatives, 5

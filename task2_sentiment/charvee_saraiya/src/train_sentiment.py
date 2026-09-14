@@ -1,6 +1,6 @@
 """
 Task 2 -- Yelp Polarity Sentiment Classification (no pretrained embeddings/LMs).
-Author: Charvee
+Author: Charvee Saraiya
 
 Three models, deliberately different from teammate's lineup, all with embeddings learned
 from scratch:
@@ -95,7 +95,7 @@ plt.figure(figsize=(6, 4))
 plt.hist(train_df["word_len"], bins=50, color="darkorange")
 plt.xlabel("review length (words)")
 plt.ylabel("count")
-plt.title("Charvee -- Yelp Polarity review length distribution (train)")
+plt.title("Charvee Saraiya -- Yelp Polarity review length distribution (train)")
 plt.tight_layout()
 plt.savefig(os.path.join(OUT_DIR, "length_distribution.png"), dpi=130)
 plt.show()
@@ -318,7 +318,7 @@ for name, hist in all_histories.items():
     plt.plot(hist["epoch"], hist["train_loss"], label=name)
 plt.xlabel("epoch")
 plt.ylabel("train loss")
-plt.title("Charvee -- Task 2 training loss curves")
+plt.title("Charvee Saraiya -- Task 2 training loss curves")
 plt.legend()
 plt.tight_layout()
 plt.savefig(os.path.join(OUT_DIR, "loss_curves.png"), dpi=130)
