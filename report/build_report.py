@@ -22,7 +22,7 @@ from reportlab.platypus import (
 )
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEAM_NUMBER = "[Team Number]"  # fill in once assigned on Canvas
+TEAM_NUMBER = "4"
 GITHUB_URL = "https://github.com/Ishan002/Data266--Lab1"
 
 OUT_PATH = os.path.join(ROOT, "report", f"DATA266_Lab1_Report_Team_{TEAM_NUMBER}.pdf")

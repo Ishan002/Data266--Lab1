@@ -1,4 +1,4 @@
-# DATA266 Lab 1 — Fall 2026 — Team [Team Number]
+# DATA266 Lab 1 — Fall 2026 — Team 4
 
 **Members:** Ishan Shah, Charvee Saraiya
 
@@ -16,7 +16,7 @@ This repository contains both members' independent implementations for all three
    between Monet paintings and photos, with a Kaggle leaderboard submission.
 
 The combined final report is at
-[`report/DATA266_Lab1_Report_Team_[Team Number].pdf`](report/).
+[`report/DATA266_Lab1_Report_Team_4.pdf`](report/).
 
 ## Setup
 
@@ -97,7 +97,7 @@ team-repo/
 │   ├── manifests/                <- environment.txt, pip freeze, per-run checkpoint map
 │   └── raw_logs/                 <- copies of every member's raw_train_log.txt
 └── report/
-    └── DATA266_Lab1_Report_Team_[Team Number].pdf
+    └── DATA266_Lab1_Report_Team_4.pdf
 ```
 
 Each member's folder under every task follows:
