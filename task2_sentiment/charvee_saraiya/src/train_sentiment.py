@@ -41,6 +41,9 @@ BATCH_SIZE = 48
 EPOCHS = 6
 LR = 8e-4
 
+if os.environ.get("SMOKE_TEST") == "1":  # fast correctness check before a GPU Lab session
+    N_TRAIN, N_TEST, EPOCHS, VOCAB_SIZE = 400, 100, 1, 1000
+
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -40,6 +40,11 @@ TRAIN_CHARS = 100_000
 VAL_CHARS = 10_000
 DATA_OFFSET = 150_000  # Charvee Saraiya's independent slice (non-overlapping with Ishan's 0:110_000)
 
+if os.environ.get("SMOKE_TEST") == "1":  # fast correctness check before a GPU Lab session
+    N_EPOCHS = 2
+    TRAIN_CHARS = 20_000
+    VAL_CHARS = 2_000
+
 try:
     HERE = os.path.dirname(os.path.abspath(__file__))
 except NameError:  # running inside a Jupyter notebook (nbconvert cwd = notebook's dir)

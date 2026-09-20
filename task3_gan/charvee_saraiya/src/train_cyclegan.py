@@ -42,6 +42,9 @@ LR = 2.5e-4
 LAMBDA_CYCLE = 8.0
 DECAY_START_EPOCH = 20
 
+if os.environ.get("SMOKE_TEST") == "1":  # fast correctness check before a GPU Lab session
+    N_MONET, N_PHOTO, N_TEST, EPOCHS, DECAY_START_EPOCH = 20, 20, 8, 2, 1
+
 random.seed(SEED)
 np.random.seed(SEED)
 torch.manual_seed(SEED)
