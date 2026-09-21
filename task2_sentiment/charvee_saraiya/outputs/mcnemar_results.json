@@ -1,14 +1,14 @@
 {
   "experimental_gru": {
     "n01_a_only_correct": 189,
-    "n10_b_only_correct": 372,
-    "statistic": 59.0445632798574,
-    "p_value": 1.5432100042289676e-14
+    "n10_b_only_correct": 380,
+    "statistic": 63.44463971880492,
+    "p_value": 1.6653345369377348e-15
   },
   "experimental_dilated_cnn": {
-    "n01_a_only_correct": 243,
-    "n10_b_only_correct": 355,
-    "statistic": 20.603678929765888,
-    "p_value": 5.648746019715212e-06
+    "n01_a_only_correct": 248,
+    "n10_b_only_correct": 353,
+    "statistic": 17.996672212978368,
+    "p_value": 2.2129147972282937e-05
   }
 }
