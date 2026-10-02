@@ -59,4 +59,4 @@ epoch  58/60 | train_loss 1.9407 | val_loss 1.9825 | val_acc 0.4059 | lr 3.10e-0
 epoch  59/60 | train_loss 1.9416 | val_loss 1.9781 | val_acc 0.4055 | lr 3.03e-05 | grad_norm 0.783
 epoch  60/60 | train_loss 1.9351 | val_loss 1.9842 | val_acc 0.4041 | lr 3.00e-05 | grad_norm 0.910
 
-Total training time: 73.96s | tokens/sec: 79748.7 | peak_mem_MB: 493.6 | nan_count: 0
+Total training time: 40.84s | tokens/sec: 144432.5 | peak_mem_MB: 493.6 | nan_count: 0
